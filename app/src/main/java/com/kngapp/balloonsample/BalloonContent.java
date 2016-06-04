@@ -12,12 +12,23 @@ public class BalloonContent {
      */
 
     private int mType;
+    private long id;
     private String mText;
     private String mURL;
     private boolean isLeft;
 
-    public BalloonContent(){
+
+    public long getId(){
+        return id;
+    }
+
+    public void setId(long id){
+        this.id = id;
+    }
+    public BalloonContent(String str){
+        //コンストラクタ
         isLeft = true;
+        mText = str;
     }
 
     public void setText(String text){
@@ -30,5 +41,12 @@ public class BalloonContent {
 
     public void setLeft(boolean bool){
         isLeft = bool;
+    }
+
+    public String getText(){
+        return mText;
+    }
+    public boolean isLeft(){
+        return isLeft;
     }
 }
